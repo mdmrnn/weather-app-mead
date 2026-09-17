@@ -71,6 +71,6 @@ app.get("/{*splat}", (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log("server is up and running on port 3000");
+app.listen(port, "0.0.0.0", () => {
+  console.log(`server is up and running on port ${port}`);
 });
