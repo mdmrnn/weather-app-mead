@@ -40,8 +40,7 @@ function getWeather(geoData, callback) {
       current.feelslike +
       " degrees out.\nwind speed is " +
       current.wind_speed +
-      " km/hr";
-    console.log(current);
+      " km/hr.";
 
     callback(undefined, message);
   });
