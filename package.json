@@ -1,0 +1,19 @@
+{
+  "name": "4.web-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "hbs": "^4.3.0",
+    "postman-request": "^2.88.1-postman.49",
+    "request": "^2.88.2"
+  }
+}
