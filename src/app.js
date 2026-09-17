@@ -39,12 +39,14 @@ app.get("/weather", (req, res) => {
   }
   getCoordsNeshan(req.query.address, (geoError, geoData) => {
     if (geoError) {
-      return console.log("Geocoding Error:", geoError);
+      console.log("Geocoding Error:", geoError);
+      return res.status(502).send({ error: geoError });
     }
 
     getWeather(geoData, (weatherError, message) => {
       if (weatherError) {
-        return console.log("Weather Error:", weatherError);
+        console.log("Weather Error:", weatherError);
+        return res.status(502).send({ error: weatherError });
       }
       res.send({
         location: req.query.address,
