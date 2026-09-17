@@ -32,12 +32,16 @@ function getWeather(geoData, callback) {
     // 3. Handle success
     const current = response.body.current;
     const message =
+      "\n" +
       current.weather_descriptions[0] +
-      ". It is currently " +
+      ".\n It is currently " +
       current.temperature +
       " degrees out. It feels like " +
       current.feelslike +
-      " degrees out.";
+      " degrees out.\nwind speed is " +
+      current.wind_speed +
+      " km/hr";
+    console.log(current);
 
     callback(undefined, message);
   });
